@@ -23,7 +23,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="<?= base_url() ?>">Perpus STIE Indonesia</a>
+                <a class="navbar-brand" href="<?= base_url() ?>">Perpustakaan STIE Indonesia Banjarmasin</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,7 +34,7 @@
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">
-                                        John Abraham</h5>
+                                        Admin</h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="<?= base_url('login/logout') ?>"><i class="fas fa-power-off mr-2"></i>Logout</a>

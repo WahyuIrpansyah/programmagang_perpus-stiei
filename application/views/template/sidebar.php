@@ -47,19 +47,19 @@
                             <ul class="nav flex-column">
                                 <?php if ($this->session->userdata('peran') != 'ADMIN') : ?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('dataperpanjangankartu') ?>">Data Absensi</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanperpanjangankartu') ?>">Laporan Absensi</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('datapengunjungperhari') ?>">Data Member</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanpengunjungperhari') ?>">Laporan Member</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('datapengunjungperbulan') ?>">Data Pembayaran</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanpengunjungperbulan') ?>">Laporan Pembayaran</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('datapeminjambuku') ?>">Data Pengunjung</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanpeminjambuku') ?>">Laporan Pengunjung</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('dataanggota') ?>">Data Denda</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporananggota') ?>">Laporan Denda</a>
                                     </li>
                                 <?php endif; ?>
                             </ul>
