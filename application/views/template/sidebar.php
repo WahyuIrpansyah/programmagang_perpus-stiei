@@ -53,13 +53,13 @@
                                         <a class="nav-link" href="<?php echo base_url('laporanmember_baru') ?>">Laporan Member</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanpengunjungperbulan') ?>">Laporan Pembayaran</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanpembayaran') ?>">Laporan Pembayaran</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanpeminjambuku') ?>">Laporan Pengunjung</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanpengunjung') ?>">Laporan Pengunjung</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporananggota') ?>">Laporan Denda</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporandenda') ?>">Laporan Denda</a>
                                     </li>
                                 <?php endif; ?>
                             </ul>

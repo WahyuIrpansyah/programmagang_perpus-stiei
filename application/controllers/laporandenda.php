@@ -1,14 +1,13 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class denda extends CI_Controller
+class laporandenda extends CI_Controller
 {
 
     function __construct()
     {
         parent::__construct();
         $this->load->model('DendaModel');
-        $this->load->library('pdf');
     }
 
     public function cetak()
@@ -19,25 +18,34 @@ class denda extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Masukkan Denda | STIE Indonesia";
+        $data['title'] = "Laporan Denda | STIE Indonesia";
         $data['denda'] = $this->DendaModel->get_denda();
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar');
-        $this->load->view('denda/denda_create', $data);
+        $this->load->view('denda/denda_read', $data);
         $this->load->view('template/footer');
     }
 
-    public function tambah()
+    public function ubah($bulan)
     {
-        if (isset($_POST['create'])) {
-            $this->DendaModel->insert_denda();
+        if (isset($_POST['update'])) {
+            $this->DendaModel->update_denda();
             redirect('denda');
         } else {
-            $data['title'] = "Tambah Data Denda | SIMDAWA-APP";
+            $data['title'] = "Perbaharui Data Denda | SIMDAWA-APP";
+            $data['denda'] = $this->DendaModel->get_denda_bybulan($bulan);
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');
-            $this->load->view('denda/denda_create');
+            $this->load->view('denda/denda_update');
             $this->load->view('template/footer');
+        }
+    }
+
+    public function hapus($bulan)
+    {
+        if (isset($bulan)) {
+            $this->DendaModel->delete_denda($bulan);
+            redirect('laporandenda');
         }
     }
 }
