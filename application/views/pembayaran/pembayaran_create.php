@@ -47,7 +47,11 @@
                                     <div class="form-group row">
                                         <label for="jurusan" class="col-md-2">Jurusan</label>
                                         <div class="col-md-10">
-                                            <input type="text" name="jurusan" required placeholder="Jurusan" class="form-control">
+                                            <select name="jurusan" required class="form-control">
+                                                <option value="">- Pilih Jurusan -</option>
+                                                <option value="akuntansi">Akuntansi</option>
+                                                <option value="manajemen">Manajemen</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
