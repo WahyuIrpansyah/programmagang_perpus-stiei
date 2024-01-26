@@ -47,7 +47,7 @@
                             <ul class="nav flex-column">
                                 <?php if ($this->session->userdata('peran') != 'ADMIN') : ?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanperpanjangankartu') ?>">Laporan Absensi</a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanabsensi') ?>">Laporan Absensi</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="<?php echo base_url('laporanpengunjungperhari') ?>">Laporan Member</a>
