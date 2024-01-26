@@ -23,7 +23,7 @@
                                         <a class="nav-link" href="<?php echo base_url('absensi') ?>">Absensi</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('memberbaru') ?>">Member Baru</span></a>
+                                        <a class="nav-link" href="<?php echo base_url('member_baru') ?>">Member Baru</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="<?php echo base_url('pembayaran') ?>">Pembayaran</span></a>

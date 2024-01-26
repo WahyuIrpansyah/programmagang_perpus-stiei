@@ -28,7 +28,7 @@
                                 <input type="hidden" name="tanggal" value="<?= $absensi->tanggal ?>">
                                 <label for="tanggal" class="col-md-2">Tanggal</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="tanggal" required placeholder="tanggal" value="<?= $absensi->tanggal ?>" class="form-control">
+                                    <input type="date" name="tanggal" required class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -46,7 +46,13 @@
                             <div class="form-group row">
                                 <label for="jenis_pengunjung" class="col-md-2">Jenis Pengunjung</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="jenis_pengunjung" required placeholder="jenis_pengunjung" value="<?= $absensi->jenis_pengunjung ?>" class="form-control">
+                                    <select name="jenis_pengunjung" required class="form-control">
+                                        <option value="">- Pilih Jenis Pengunjung -</option>
+                                        <option value="akuntansi">Akuntansi</option>
+                                        <option value="manajemen">Manajemen</option>
+                                        <option value="dosen">Dosen</option>
+                                        <option value="karyawan">Karyawan</option>
+                                    </select>
                                 </div>
                             </div>
                             <a href="<?= base_url('absensi') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
