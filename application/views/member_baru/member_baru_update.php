@@ -8,7 +8,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?= base_url('home') ?>" class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="<?= base_url('member_baru') ?>" class="breadcrumb-link">Member</a></li>
+                                <li class="breadcrumb-item"><a href="<?= base_url('laporanmember_baru') ?>" class="breadcrumb-link">Data Member</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Perbaharui Data</li>
                             </ol>
                         </nav>
@@ -111,7 +111,7 @@
                                                                                             <input type="file" name="foto" required placeholder="foto" class="form-control">
                                                                                         </div>
                                                                                     </div>
-                                                                                    <a href="<?= base_url('memeber_baru') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                                                                                    <a href="<?= base_url('laporanmemeber_baru') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                                                                                     <button type="submit" name="update" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                                                                                 </form>
                                                                             </div>

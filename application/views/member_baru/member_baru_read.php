@@ -8,7 +8,6 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?= base_url('home') ?>" class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="<?= base_url('member_baru') ?>" class="breadcrumb-link">Member Baru</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Data Member Baru</li>
                             </ol>
                         </nav>
@@ -21,7 +20,6 @@
                 <div class="card">
                     <div class="card-header">
                         Data Member Baru
-                        <a href="<?= base_url('member_baru/tambah') ?>" class="btn btn-sm btn-success float-right"><i class="fas fa-plus">Tambah Data</i></a>
                         <a href="<?= base_url('member_baru/cetak') ?>" class="btn btn-sm btn-info mr-1 float-right"><i class="fas fa-print">Cetak Data</i></a>
                     </div>
                     <div class="card-body">
@@ -57,8 +55,8 @@
                                         <td><?= $a->no_telp ?></td>
                                         <td><?= $a->foto ?></td>
                                         <td>
-                                            <a href="<?= base_url('member_baru/ubah/' . $a->npm) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
-                                            <a href="<?= base_url('member_baru/hapus/' . $a->npm) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url('laporanmember_baru/ubah/' . $a->npm) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
+                                            <a href="<?= base_url('laporanmember_baru/hapus/' . $a->npm) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php
