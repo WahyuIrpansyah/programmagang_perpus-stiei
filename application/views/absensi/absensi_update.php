@@ -8,7 +8,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?= base_url('home') ?>" class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="<?= base_url('absensi') ?>" class="breadcrumb-link">Absensi</a></li>
+                                <li class="breadcrumb-item"><a href="<?= base_url('laporanabsensi') ?>" class="breadcrumb-link">Data Absensi</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Perbaharui Data</li>
                             </ol>
                         </nav>
@@ -55,7 +55,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <a href="<?= base_url('absensi') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                            <a href="<?= base_url('laporanabsensi') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                             <button type="submit" name="update" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                         </form>
                     </div>

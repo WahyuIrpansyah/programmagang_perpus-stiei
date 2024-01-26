@@ -8,7 +8,6 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?= base_url('home') ?>" class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="<?= base_url('absensi') ?>" class="breadcrumb-link">Absensi</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Data Absensi</li>
                             </ol>
                         </nav>
@@ -21,9 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         Data Absensi
-                        <a href="<?= base_url('absensi/tambah') ?>" class="btn btn-sm btn-success float-right">
-                            <i class="fas fa-plus">Tambah Data</i>
-                        </a>
+                        <a href="<?= base_url('absensi/cetak') ?>" class="btn btn-sm btn-info mr-1 float-right"><i class="fas fa-print">Cetak Data</i></a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered" id="mytabel">
@@ -46,8 +43,8 @@
                                         <td><?= $a->nama ?></td>
                                         <td><?= $a->jenis_pengunjung ?></td>
                                         <td>
-                                            <a href="<?= base_url('absensi/ubah/' . $a->npm) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
-                                            <a href="<?= base_url('absensi/hapus/' . $a->npm) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url('laporanabsensi/ubah/' . $a->npm) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
+                                            <a href="<?= base_url('laporanabsensi/hapus/' . $a->npm) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php

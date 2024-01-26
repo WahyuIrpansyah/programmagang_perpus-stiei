@@ -8,6 +8,12 @@ class absensi extends CI_Controller
     {
         parent::__construct();
         $this->load->model('AbsensiModel');
+        $this->load->library('pdf');
+    }
+    public function cetak()
+    {
+        $data['absensi'] = $this->AbsensiModel->get_absensi();
+        $this->load->view('absensi/absensi_print', $data);
     }
 
     public function index()
@@ -23,30 +29,6 @@ class absensi extends CI_Controller
             $this->load->view('template/sidebar');
             $this->load->view('absensi/absensi_create');
             $this->load->view('template/footer');
-        }
-    }
-
-
-    public function ubah($npm)
-    {
-        if (isset($_POST['update'])) {
-            $this->AbsensiModel->update_absensi();
-            redirect('absensi');
-        } else {
-            $data['title'] = "Perbaharui Data Absensi | SIMDAWA-APP";
-            $data['absensi'] = $this->AbsensiModel->get_absensi_bynpm($npm);
-            $this->load->view('template/header', $data);
-            $this->load->view('template/sidebar');
-            $this->load->view('absensi/absensi_update');
-            $this->load->view('template/footer');
-        }
-    }
-
-    public function hapus($npm)
-    {
-        if (isset($npm)) {
-            $this->AbsensiModel->delete_absensi($npm);
-            redirect('absensi');
         }
     }
 }
