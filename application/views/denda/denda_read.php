@@ -8,7 +8,6 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?= base_url('home') ?>" class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a href="<?= base_url('denda') ?>" class="breadcrumb-link">Denda</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Data Denda</li>
                             </ol>
                         </nav>
@@ -21,8 +20,6 @@
                 <div class="card">
                     <div class="card-header">
                         Data Denda
-                        <a href="<?= base_url('denda/tambah') ?>" class="btn btn-sm btn-success float-right"><i class="fas fa-plus">Tambah Data</i>
-                        </a>
                         <a href="<?= base_url('denda/cetak') ?>" class="btn btn-sm btn-info mr-1 float-right"><i class="fas fa-print">Cetak Data</i></a>
                     </div>
                     <div class="card-body">

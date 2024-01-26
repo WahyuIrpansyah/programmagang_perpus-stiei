@@ -19,7 +19,7 @@ class denda extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Masukkan Denda | STIE Indonesia";
+        $data['title'] = "Form Denda | STIE Indonesia";
         $data['denda'] = $this->DendaModel->get_denda();
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar');
@@ -33,7 +33,7 @@ class denda extends CI_Controller
             $this->DendaModel->insert_denda();
             redirect('denda');
         } else {
-            $data['title'] = "Tambah Data Denda | SIMDAWA-APP";
+            $data['title'] = "Tambah Data Denda | STIE Indonesia";
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');
             $this->load->view('denda/denda_create');
