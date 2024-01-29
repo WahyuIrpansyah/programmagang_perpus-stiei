@@ -55,7 +55,7 @@
                                                             <input type="text" name="jumlah_pengunjung" required placeholder="Jumlah Pengunjung" value="<?= $pengunjung->jumlah_pengunjung ?>" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <a href="<?= base_url('pengunjung') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                                                    <a href="<?= base_url('laporanpengunjung') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                                                     <button type="submit" name="update" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                                                 </form>
                                             </div>

@@ -36,7 +36,6 @@
                                     </li>
                                 <?php endif; ?>
                                 <?php if ($this->session->userdata('peran') != 'ADMIN') : ?>
-
                                 <?php endif; ?>
                             </ul>
                         </div>

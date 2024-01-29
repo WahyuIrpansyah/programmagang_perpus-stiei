@@ -55,7 +55,7 @@
                                                             <input type="text" name="total_denda" required placeholder="Total Denda" value="<?= $denda->total_denda ?>" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <a href="<?= base_url('denda') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                                                    <a href="<?= base_url('laporandenda') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                                                     <button type="submit" name="update" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                                                 </form>
                                             </div>

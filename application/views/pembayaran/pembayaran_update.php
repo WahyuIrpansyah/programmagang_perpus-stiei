@@ -67,7 +67,7 @@
                                     <input type="text" name="total_pembayaran" required placeholder="Total Pembayaran" value="<?= $pembayaran->total_pembayaran ?>" class="form-control">
                                 </div>
                             </div>
-                            <a href="<?= base_url('pembayaran') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                            <a href="<?= base_url('laporanpembayaran') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                             <button type="submit" name="update" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                         </form>
                     </div>

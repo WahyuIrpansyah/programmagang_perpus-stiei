@@ -15,23 +15,16 @@ class pembayaran extends CI_Controller
         $data['pembayaran'] = $this->PembayaranModel->get_pembayaran();
         $this->load->view('pembayaran/pembayaran_print', $data);
     }
+
     public function index()
     {
-        $data['title'] = "Dasboard | SIMDAWA-APP";
+        $data['title'] = "Pembayaran | STIE Indonesia Banjarmasin";
         $data['pembayaran'] = $this->PembayaranModel->get_pembayaran();
-        $this->load->view('template/header', $data);
-        $this->load->view('template/sidebar');
-        $this->load->view('pembayaran/pembayaran_create', $data);
-        $this->load->view('template/footer');
-    }
 
-    public function tambah()
-    {
         if (isset($_POST['create'])) {
             $this->PembayaranModel->insert_pembayaran();
             redirect('pembayaran');
         } else {
-            $data['title'] = "Tambah Data Pembayaran | SIMDAWA-APP";
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');
             $this->load->view('pembayaran/pembayaran_create');

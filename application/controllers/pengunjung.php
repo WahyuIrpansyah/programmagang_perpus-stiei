@@ -10,7 +10,6 @@ class pengunjung extends CI_Controller
         $this->load->model('PengunjungModel');
         $this->load->library('pdf');
     }
-
     public function cetak()
     {
         $data['pengunjung'] = $this->PengunjungModel->get_pengunjung();
@@ -19,21 +18,13 @@ class pengunjung extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Dasboard | SIMDAWA-APP";
+        $data['title'] = "Pengunjung | STIE Indonesia Banjarmasin";
         $data['pengunjung'] = $this->PengunjungModel->get_pengunjung();
-        $this->load->view('template/header', $data);
-        $this->load->view('template/sidebar');
-        $this->load->view('pengunjung/pengunjung_create', $data);
-        $this->load->view('template/footer');
-    }
 
-    public function tambah()
-    {
         if (isset($_POST['create'])) {
             $this->PengunjungModel->insert_pengunjung();
             redirect('pengunjung');
         } else {
-            $data['title'] = "Tambah Data Pengunjung | SIMDAWA-APP";
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');
             $this->load->view('pengunjung/pengunjung_create');

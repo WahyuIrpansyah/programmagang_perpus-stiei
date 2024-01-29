@@ -53,8 +53,8 @@
                                             <td><?= $a->tujuan ?></td>
                                             <td><?= $a->total_pembayaran ?></td>
                                             <td>
-                                                <a href="<?= base_url('pembayaran/ubah/' . $a->npm) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
-                                                <a href="<?= base_url('pembayaran/hapus/' . $a->npm) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+                                                <a href="<?= base_url('laporanpembayaran/ubah/' . $a->npm) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
+                                                <a href="<?= base_url('laporanpembayaran/hapus/' . $a->npm) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
                                             </td>
                                         </tr>
                                     <?php

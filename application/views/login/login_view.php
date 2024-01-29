@@ -52,7 +52,7 @@
             </div>
             <div class="card-footer bg-white p-0 ">
                 <div class="card-footer">
-                    <a href="<?= base_url('pendaftaran/daftar'); ?>" class="btn btn-sm btn-block btn-info">Daftar
+                    <a href="<?= base_url('daftar_akun/daftar_akun'); ?>" class="btn btn-sm btn-block btn-info">Daftar
                         Akun</a>
                 </div>
             </div>

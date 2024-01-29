@@ -42,8 +42,8 @@
                                         <td><?= $a->jenis_pengunjung ?></td>
                                         <td><?= $a->jumlah_pengunjung ?></td>
                                         <td>
-                                            <a href="<?= base_url('pengunjung/ubah/' . $a->id) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
-                                            <a href="<?= base_url('pengunjung/hapus/' . $a->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url('laporanpengunjung/ubah/' . $a->bulan) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
+                                            <a href="<?= base_url('laporanpengunjung/hapus/' . $a->bulan) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php
