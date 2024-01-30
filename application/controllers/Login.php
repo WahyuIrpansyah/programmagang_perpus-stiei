@@ -9,7 +9,19 @@ class Login extends CI_Controller
     }
     public function index()
     {
-
+        /*
+- Jika button btn_login diklik
+- Panggil fungsi cek_login di LoginModel untuk mengambil nilai array $return
+yang berisi status
+- Jika status cek_login benar, maka login berhasil
+- Buat array data login yang menampung nilai id, peran dan nama
+- Buat session dari array data login, kemudian arahkan ke controller
+home
+- Tetapi jika status cek_login tidak bernilai benar
+- Tampilkan status pesan cek login dan kembalikan ke controller login
+- Tetapi jika button btn_login tidak diklik
+- Tampilkan halaman login
+*/
         if (isset($_POST['btn_login'])) {
             $cek_login = $this->LoginModel->cek_login();
             if ($cek_login['status'] == True) {
@@ -26,7 +38,7 @@ class Login extends CI_Controller
                 redirect('login');
             }
         } else {
-            $data['title'] = "Halaman Login | SIMDAWA-APP";
+            $data['title'] = "Halaman Login | STIE Indonesia Banjarmasin";
             $this->load->view('login/login_view', $data);
         }
     }

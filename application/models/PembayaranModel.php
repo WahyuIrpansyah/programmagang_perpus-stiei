@@ -47,7 +47,7 @@ class PembayaranModel extends CI_Model
         $this->db->update($this->tabel, $data);
     }
 
-    function delete_persyaratan($npm)
+    function delete_pembayaran($npm)
     {
         $this->db->where('npm', $npm);
         $this->db->delete($this->tabel);

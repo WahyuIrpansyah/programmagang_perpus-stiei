@@ -44,7 +44,7 @@
             <div class="card-body">
                 <?php $this->load->view('template/notifikasi'); ?>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="npm" required="" placeholder="Npm" autocomplete="off">
+                    <input class="form-control form-control-lg" type="text" name="no_pendaftaran" required="" placeholder="No Pendaftaran Mahassiwa Baru" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <input class="form-control form-control-lg" type="text" name="nama_lengkap" required="" placeholder="Nama Lengkap" autocomplete="off">
@@ -56,7 +56,7 @@
                     <input class="form-control form-control-lg" type="password" name="password" required="" placeholder="Password Akun Anda" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="prodi" name="prodi" required="" placeholder="Prodi" autocomplete="off">
+                    <input class="form-control form-control-lg" type="file" name="bukti_daftar" required="" placeholder="Bukti Daftar" autocomplete="off">
                 </div>
                 <div class="form-group pt-2">
                     <button class="btn btn-block btn-primary" type="submit" name="btn_daftar">Daftar Akun</button>

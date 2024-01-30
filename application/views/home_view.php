@@ -12,8 +12,8 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Visi Misi</a></li>
-                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tentang</a></li>
+                                <li class="breadcrumb-item"><a href="visi_misi" class="breadcrumb-link">Visi Misi</a></li>
+                                <li class="breadcrumb-item"><a href="tentang" class="breadcrumb-link">Tentang</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -27,7 +27,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <h3 class="text-center">SELAMAT DATANG DI PERPUSTAKAAN SEKOLAH TINGGI ILMU EKONOMI INDONESIA</h3>
             </div>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" datea-bs-ride="carousel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./lib/img/img1.jpeg" class="d-block w-100" alt="...">
