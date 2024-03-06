@@ -13,7 +13,7 @@ class BukuModel extends CI_Model
     {
         $data = [
             'id_buku' => $this->input->post('id_buku'),
-            'nama_buku' => $this->input->post('nama_buku'),
+            'judul_buku' => $this->input->post('judul_buku'),
             'pengarang' => $this->input->post('pengarang'),
             'penerbit' => $this->input->post('penerbit'),
             'tahun' => $this->input->post('tahun')
@@ -31,7 +31,7 @@ class BukuModel extends CI_Model
     {
         $data = [
             'id_buku' => $this->input->post('id_buku'),
-            'nama_buku' => $this->input->post('nama_buku'),
+            'judul_buku' => $this->input->post('judul_buku'),
             'pengarang' => $this->input->post('pengarang'),
             'penerbit' => $this->input->post('penerbit'),
             'tahun' => $this->input->post('tahun')
