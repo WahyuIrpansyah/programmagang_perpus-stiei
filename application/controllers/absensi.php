@@ -1,18 +1,21 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class absensi extends CI_Controller
+class Absensi extends CI_Controller
 {
 
     function __construct()
     {
         parent::__construct();
         $this->load->model('AbsensiModel');
+        $this->load->model('Member_BaruModel');
         $this->load->library('pdf');
     }
+
     public function cetak()
     {
         $data['absensi'] = $this->AbsensiModel->get_absensi();
+        $data['members_with_absensi'] = $this->AbsensiModel->get_member_baru_with_absensi();
         $this->load->view('absensi/absensi_print', $data);
     }
 
@@ -20,6 +23,7 @@ class absensi extends CI_Controller
     {
         $data['title'] = "Absensi | STIE Indonesia Banjarmasin";
         $data['absensi'] = $this->AbsensiModel->get_absensi();
+        $data['members'] = $this->Member_BaruModel->get_member_baru();
 
         if (isset($_POST['create'])) {
             $this->AbsensiModel->insert_absensi();

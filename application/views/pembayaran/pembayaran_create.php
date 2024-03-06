@@ -35,7 +35,12 @@
                             <div class="form-group row">
                                 <label for="npm" class="col-md-2">Npm</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="npm" required placeholder="Npm" class="form-control">
+                                    <select name="npm" required class="form-control">
+                                        <option value="">- Pilih NPM -</option>
+                                        <?php foreach ($members as $member) : ?>
+                                            <option value="<?= $member->npm ?>"><?= $member->npm ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
                             </div>
 

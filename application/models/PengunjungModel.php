@@ -21,9 +21,9 @@ class PengunjungModel extends CI_Model
         $this->db->insert($this->tabel, $data);
     }
 
-    public function get_pengunjung_bybulan($bulan)
+    public function get_pengunjung_byid_pengunjung($id_pengunjung)
     {
-        return $this->db->get_where($this->tabel, ['bulan' => $bulan])->row();
+        return $this->db->get_where($this->tabel, ['id_pengunjung' => $id_pengunjung])->row();
     }
 
     function update_pengunjung()
@@ -35,13 +35,13 @@ class PengunjungModel extends CI_Model
             'jumlah_pengunjung' => $this->input->post('jumlah_pengunjung')
         ];
 
-        $this->db->where('bulan', $this->input->post('bulan'));
+        $this->db->where('id_pengunjung', $this->input->post('id_pengunjung'));
         $this->db->update($this->tabel, $data);
     }
 
-    function delete_pengunjung($bulan)
+    function delete_pengunjung($id_pengunjung)
     {
-        $this->db->where('bulan', $bulan);
+        $this->db->where('id_pengunjung', $id_pengunjung);
         $this->db->delete($this->tabel);
     }
 }

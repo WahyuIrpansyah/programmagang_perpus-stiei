@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class member_baru extends CI_Controller
+class Member_Baru extends CI_Controller
 {
 
     function __construct()
@@ -10,6 +10,7 @@ class member_baru extends CI_Controller
         $this->load->model('Member_BaruModel');
         $this->load->library('pdf');
     }
+
     public function cetak()
     {
         $data['member_baru'] = $this->Member_BaruModel->get_member_baru();
@@ -18,7 +19,7 @@ class member_baru extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Absensi | STIE Indonesia Banjarmasin";
+        $data['title'] = "Member Baru | STIE Indonesia Banjarmasin";
         $data['member_baru'] = $this->Member_BaruModel->get_member_baru();
 
         if (isset($_POST['create'])) {

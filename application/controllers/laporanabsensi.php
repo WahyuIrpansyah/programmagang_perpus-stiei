@@ -24,9 +24,9 @@ class laporanabsensi extends CI_Controller
     {
         if (isset($_POST['update'])) {
             $this->AbsensiModel->update_absensi();
-            redirect('absensi');
+            redirect('laporanabsensi');
         } else {
-            $data['title'] = "Perbaharui Data Absensi | SIMDAWA-APP";
+            $data['title'] = "Perbaharui Data Absensi | STIE Indonesia Banjarmasin";
             $data['absensi'] = $this->AbsensiModel->get_absensi_bynpm($npm);
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="page-header">
-                    <h2 class="pageheader-title">Tambah Data Absensi</h2>
+                    <h2 class="pageheader-title">Tambah Data Buku</h2>
                     <div class="page-breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -19,46 +19,41 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="card">
                     <div class="card-header">
-                        Tambah Data Absensi
+                        Tambah Data Buku
                     </div>
                     <div class="card-body">
                         <form action="" method="post">
                             <div class="form-group row">
-                                <label for="tanggal" class="col-md-2">Tanggal</label>
+                                <label for="id_buku" class="col-md-2">id Buku</label>
                                 <div class="col-md-10">
-                                    <input type="date" name="tanggal" required class="form-control">
+                                    <input type="text" name="id_buku" required placeholder="Masukkan Id Buku" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="npm" class="col-md-2">Npm</label>
+                                <label for="judul_buku" class="col-md-2">Judul Buku</label>
                                 <div class="col-md-10">
-                                    <select name="npm" required class="form-control">
-                                        <option value="">- Pilih NPM -</option>
-                                        <?php foreach ($members as $member) : ?>
-                                            <option value="<?= $member->npm ?>"><?= $member->npm ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    <input type="text" name="judul_buku" required placeholder="Masukkan judul Buku" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="nama" class="col-md-2">Nama</label>
+                                <label for="pengarang" class="col-md-2">Pengarang</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="nama" required placeholder="Masukkan Nama" class="form-control">
+                                    <input type="text" name="pengarang" required placeholder="Masukkan Nama Pengarang" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="jenis_pengunjung" class="col-md-2">Jenis Pengunjung</label>
+                                <label for="penerbit" class="col-md-2">Penerbit</label>
                                 <div class="col-md-10">
-                                    <select name="jenis_pengunjung" required class="form-control">
-                                        <option value="">- Pilih Jenis Pengunjung -</option>
-                                        <option value="akuntansi">Akuntansi</option>
-                                        <option value="manajemen">Manajemen</option>
-                                        <option value="dosen">Dosen</option>
-                                        <option value="karyawan">Karyawan</option>
-                                    </select>
+                                    <input type="text" name="penerbit" required placeholder="Masukkan Nama Penerbit" class="form-control">
                                 </div>
                             </div>
-                            <a href="<?= base_url('absensi') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                            <div class="form-group row">
+                                <label for="tahun" class="col-md-2">Tahun</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="tahun" required placeholder="Masukkan Tahun Terbit" class="form-control">
+                                </div>
+                            </div>
+                            <a href="<?= base_url('buku') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                             <button type="submit" name="create" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                         </form>
                     </div>

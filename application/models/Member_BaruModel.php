@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+
 class Member_BaruModel extends CI_Model
 {
     private $tabel = "member_baru";
@@ -72,8 +73,8 @@ class Member_BaruModel extends CI_Model
             $this->session->set_flashdata('status', false);
             return false;
         }
-        /* proses update hampir sama seperti insert, bedanya, ada tambahan where (baris 39) untuk menentukan data mana yang akan diperbaharui */
     }
+
     public function delete_member_baru($npm)
     {
         $this->db->where('npm', $npm);
@@ -87,5 +88,16 @@ class Member_BaruModel extends CI_Model
             $this->session->set_flashdata('status', false);
             return false;
         }
+    }
+
+    public function add_foreign_key_constraint()
+    {
+        $sql = "ALTER TABLE absensi
+                ADD CONSTRAINT fk_absensi_member_baru
+                FOREIGN KEY (npm) REFERENCES member_baru(npm)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE";
+
+        $this->db->query($sql);
     }
 }

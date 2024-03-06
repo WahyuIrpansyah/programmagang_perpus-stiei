@@ -8,6 +8,7 @@ class pembayaran extends CI_Controller
     {
         parent::__construct();
         $this->load->model('PembayaranModel');
+        $this->load->model('Member_BaruModel');
         $this->load->library('pdf');
     }
     public function cetak()
@@ -20,6 +21,7 @@ class pembayaran extends CI_Controller
     {
         $data['title'] = "Pembayaran | STIE Indonesia Banjarmasin";
         $data['pembayaran'] = $this->PembayaranModel->get_pembayaran();
+        $data['members'] = $this->Member_BaruModel->get_member_baru();
 
         if (isset($_POST['create'])) {
             $this->PembayaranModel->insert_pembayaran();

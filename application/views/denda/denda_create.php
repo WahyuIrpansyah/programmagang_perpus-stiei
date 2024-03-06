@@ -30,18 +30,18 @@
                                 <div class="col-md-10">
                                     <select name="bulan" required class="form-control">
                                         <option value="">- Pilih Bulan -</option>
-                                        <option value="januari">Januari</option>
-                                        <option value="februari">Februari</option>
-                                        <option value="maret">Maret</option>
-                                        <option value="april">April</option>
-                                        <option value="mei">Mei</option>
-                                        <option value="juni">Juni</option>
-                                        <option value="juli">Juli</option>
-                                        <option value="agustus">Agustus</option>
-                                        <option value="september">September</option>
-                                        <option value="oktober">Oktober</option>
-                                        <option value="november">November</option>
-                                        <option value="desember">Desember</option>
+                                        <option value="Januari">Januari</option>
+                                        <option value="Februari">Februari</option>
+                                        <option value="Maret">Maret</option>
+                                        <option value="April">April</option>
+                                        <option value="Mei">Mei</option>
+                                        <option value="Juni">Juni</option>
+                                        <option value="Juli">Juli</option>
+                                        <option value="Agustus">Agustus</option>
+                                        <option value="September">September</option>
+                                        <option value="Oktober">Oktober</option>
+                                        <option value="November">November</option>
+                                        <option value="Desember">Desember</option>
                                     </select>
                                 </div>
                             </div>
@@ -51,10 +51,10 @@
                                 <div class="col-md-10">
                                     <select name="minggu" required class="form-control">
                                         <option value="">- Pilih Minggu -</option>
-                                        <option value="minggui">Minggu I</option>
-                                        <option value="mingguii">Minggu II</option>
-                                        <option value="mingguiii">Minggu III</option>
-                                        <option value="mingguiv">Minggu IV</option>
+                                        <option value="Minggu I">Minggu I</option>
+                                        <option value="Minggu II">Minggu II</option>
+                                        <option value="Minggu III">Minggu III</option>
+                                        <option value="Minggu IV">Minggu IV</option>
                                     </select>
                                 </div>
                             </div>

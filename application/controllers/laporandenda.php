@@ -18,7 +18,7 @@ class laporandenda extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Laporan Denda | STIE Indonesia";
+        $data['title'] = "Laporan Denda | STIE Indonesia Banjarmasin";
         $data['denda'] = $this->DendaModel->get_denda();
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar');
@@ -26,14 +26,14 @@ class laporandenda extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function ubah($bulan)
+    public function ubah($id_denda)
     {
         if (isset($_POST['update'])) {
             $this->DendaModel->update_denda();
-            redirect('denda');
+            redirect('laporandenda');
         } else {
-            $data['title'] = "Perbaharui Data Denda | SIMDAWA-APP";
-            $data['denda'] = $this->DendaModel->get_denda_bybulan($bulan);
+            $data['title'] = "Perbaharui Data Denda | STIE Indonesia Banjarmasin";
+            $data['denda'] = $this->DendaModel->get_denda_byid_denda($id_denda);
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');
             $this->load->view('denda/denda_update');
@@ -41,10 +41,10 @@ class laporandenda extends CI_Controller
         }
     }
 
-    public function hapus($bulan)
+    public function hapus($id_denda)
     {
-        if (isset($bulan)) {
-            $this->DendaModel->delete_denda($bulan);
+        if (isset($id_denda)) {
+            $this->DendaModel->delete_denda($id_denda);
             redirect('laporandenda');
         }
     }

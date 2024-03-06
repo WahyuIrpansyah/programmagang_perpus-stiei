@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class AbsensiModel extends CI_Model
 {
@@ -9,7 +10,17 @@ class AbsensiModel extends CI_Model
         return $this->db->get($this->tabel)->result();
     }
 
-    function insert_absensi()
+    public function get_member_baru_with_absensi()
+    {
+        return $this->db
+            ->select('member_baru.*, absensi.*')
+            ->from('member_baru')
+            ->join('absensi', 'member_baru.npm = absensi.npm', 'left')
+            ->get()
+            ->result();
+    }
+
+    public function insert_absensi()
     {
         $data = [
             'tanggal' => $this->input->post('tanggal'),
@@ -26,7 +37,7 @@ class AbsensiModel extends CI_Model
         return $this->db->get_where($this->tabel, ['npm' => $npm])->row();
     }
 
-    function update_absensi()
+    public function update_absensi()
     {
         $data = [
             'tanggal' => $this->input->post('tanggal'),
@@ -39,9 +50,20 @@ class AbsensiModel extends CI_Model
         $this->db->update($this->tabel, $data);
     }
 
-    function delete_absensi($npm)
+    public function delete_absensi($npm)
     {
         $this->db->where('npm', $npm);
         $this->db->delete($this->tabel);
+    }
+
+    public function add_foreign_key_constraint()
+    {
+        $sql = "ALTER TABLE absensi
+                ADD CONSTRAINT fk_absensi_member_baru
+                FOREIGN KEY (npm) REFERENCES member_baru(npm)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE";
+
+        $this->db->query($sql);
     }
 }

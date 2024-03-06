@@ -33,7 +33,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $bulan;
+                                <?php $id_denda;
                                 foreach ($denda as $a) {
                                 ?>
                                     <tr>
@@ -42,8 +42,8 @@
                                         <td><?= $a->jumlah_denda ?></td>
                                         <td><?= $a->total_denda ?></td>
                                         <td>
-                                            <a href="<?= base_url('laporandenda/ubah/' . $a->bulan) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
-                                            <a href="<?= base_url('laporandenda/hapus/' . $a->bulan) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url('laporandenda/ubah/' . $a->id_denda) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
+                                            <a href="<?= base_url('laporandenda/hapus/' . $a->id_denda) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php

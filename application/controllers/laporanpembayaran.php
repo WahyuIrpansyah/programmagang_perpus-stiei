@@ -24,9 +24,9 @@ class laporanpembayaran extends CI_Controller
     {
         if (isset($_POST['update'])) {
             $this->PembayaranModel->update_pembayaran();
-            redirect('pembayaran');
+            redirect('laporanpembayaran');
         } else {
-            $data['title'] = "Perbaharui Data Persyaratan | SIMDAWA-APP";
+            $data['title'] = "Perbaharui Data Persyaratan | STIE Indonesia Banjarmasin";
             $data['pembayaran'] = $this->PembayaranModel->get_pembayaran_bynpm($npm);
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');

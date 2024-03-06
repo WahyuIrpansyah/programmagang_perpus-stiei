@@ -26,14 +26,14 @@ class laporanpengunjung extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function ubah($bulan)
+    public function ubah($id_pengunjung)
     {
         if (isset($_POST['update'])) {
             $this->PengunjungModel->update_pengunjung();
-            redirect('pengunjung');
+            redirect('laporanpengunjung');
         } else {
-            $data['title'] = "Perbaharui Data Pengunjung | SIMDAWA-APP";
-            $data['pengunjung'] = $this->PengunjungModel->get_pengunjung_bybulan($bulan);
+            $data['title'] = "Perbaharui Data Pengunjung | STIE Indonesia Banjarmasin";
+            $data['pengunjung'] = $this->PengunjungModel->get_pengunjung_byid_pengunjung($id_pengunjung);
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');
             $this->load->view('pengunjung/pengunjung_update');
@@ -41,10 +41,10 @@ class laporanpengunjung extends CI_Controller
         }
     }
 
-    public function hapus($bulan)
+    public function hapus($id_pengunjung)
     {
-        if (isset($bulan)) {
-            $this->PengunjungModel->delete_pengunjung($bulan);
+        if (isset($id_pengunjung)) {
+            $this->PengunjungModel->delete_pengunjung($id_pengunjung);
             redirect('laporanpengunjung');
         }
     }

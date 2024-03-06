@@ -19,7 +19,7 @@ class laporanmember_baru extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Dasboard | SIMDAWA-APP";
+        $data['title'] = "Dasboard | STIE Indonesia Banjarmasin";
         $data['member_baru'] = $this->Member_BaruModel->get_member_baru();
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar');
@@ -31,9 +31,9 @@ class laporanmember_baru extends CI_Controller
     {
         if (isset($_POST['update'])) {
             $this->Member_BaruModel->update_member_baru();
-            redirect('member_baru');
+            redirect('laporanmember_baru');
         } else {
-            $data['title'] = "Perbaharui Data member_baru | SIMDAWA-APP";
+            $data['title'] = "Perbaharui Data member_baru | STIE Indonesia Banjarmasin";
             $data['member_baru'] = $this->Member_BaruModel->get_member_baru_bynpm($npm);
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');

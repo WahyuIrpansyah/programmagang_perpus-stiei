@@ -21,9 +21,9 @@ class DendaModel extends CI_Model
         $this->db->insert($this->tabel, $data);
     }
 
-    public function get_denda_bybulan($bulan)
+    public function get_denda_byid_denda($id_denda)
     {
-        return $this->db->get_where($this->tabel, ['bulan' => $bulan])->row();
+        return $this->db->get_where($this->tabel, ['id_denda' => $id_denda])->row();
     }
 
     function update_denda()
@@ -35,13 +35,13 @@ class DendaModel extends CI_Model
             'total_denda' => $this->input->post('total_denda')
         ];
 
-        $this->db->where('bulan', $this->input->post('bulan'));
+        $this->db->where('id_denda', $this->input->post('id_denda'));
         $this->db->update($this->tabel, $data);
     }
 
-    function delete_denda($bulan)
+    function delete_denda($id_denda)
     {
-        $this->db->where('bulan', $bulan);
+        $this->db->where('id_denda', $id_denda);
         $this->db->delete($this->tabel);
     }
 }
