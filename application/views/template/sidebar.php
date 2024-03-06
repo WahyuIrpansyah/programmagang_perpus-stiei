@@ -38,6 +38,9 @@
                                         <a class="nav-link" href="<?php echo base_url('pinjam') ?>">Peminjaman</span></a>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="nav-link" href="<?php echo base_url('kembali') ?>">Pengembalian</span></a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="nav-link" href="<?php echo base_url('denda') ?>">Denda</span></a>
                                     </li>
                                 <?php endif; ?>
@@ -66,6 +69,9 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="<?php echo base_url('laporanpinjam') ?>">Laporan Pinjam</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="<?php echo base_url('laporankembali') ?>">Laporan Kembali</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="<?php echo base_url('laporandenda') ?>">Laporan Denda</a>
