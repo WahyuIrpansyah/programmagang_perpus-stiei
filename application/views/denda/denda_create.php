@@ -88,7 +88,7 @@
 
                             <div class="form-group row">
                                 <div class="col-md-10 offset-md-2">
-                                    <a href="<?= base_url('denda') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                                    <a href="<?= base_url('laporandenda') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                                     <button type="submit" name="create" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                                 </div>
                             </div>

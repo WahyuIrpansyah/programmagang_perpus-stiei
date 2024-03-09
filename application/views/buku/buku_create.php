@@ -53,7 +53,7 @@
                                     <input type="text" name="tahun" required placeholder="Masukkan Tahun Terbit" class="form-control">
                                 </div>
                             </div>
-                            <a href="<?= base_url('buku') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
+                            <a href="<?= base_url('laporanbuku') ?>" class="btn btn-sm btn-danger float-right">Batal</a>
                             <button type="submit" name="create" class="btn btn-sm btn-info float-right mr-1">Simpan</button>
                         </form>
                     </div>
