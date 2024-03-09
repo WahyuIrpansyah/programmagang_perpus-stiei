@@ -20,65 +20,28 @@
                             <ul class="nav flex-column">
                                 <?php if ($this->session->userdata('peran') == 'USER' || $this->session->userdata('peran') == 'ADMIN') : ?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('absensi') ?>">Absensi</span></a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanabsensi') ?>">Absensi</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('member_baru') ?>">Member Baru</span></a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanmember_baru') ?>">Member Baru</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('pembayaran') ?>">Pembayaran</span></a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanpembayaran') ?>">Pembayaran</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('pengunjung') ?>">Pengunjung</span></a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanbuku') ?>">Buku</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('buku') ?>">Buku</span></a>
+                                        <a class="nav-link" href="<?php echo base_url('laporanpinjam') ?>">Peminjaman</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('pinjam') ?>">Peminjaman</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('kembali') ?>">Pengembalian</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('denda') ?>">Denda</span></a>
+                                        <a class="nav-link" href="<?php echo base_url('laporankembali') ?>">Pengembalian</span></a>
                                     </li>
                                 <?php endif; ?>
                             </ul>
                         </div>
                     </li>
                     <?php if ($this->session->userdata('peran') == 'ADMIN') : ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-archive"></i>Master Data</a>
-                            <div id="submenu-3" class="collapse submenu">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanabsensi') ?>">Laporan Absensi</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanmember_baru') ?>">Laporan Member</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanpembayaran') ?>">Laporan Pembayaran</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanpengunjung') ?>">Laporan Pengunjung</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanbuku') ?>">Laporan Buku</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporanpinjam') ?>">Laporan Pinjam</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporankembali') ?>">Laporan Kembali</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('laporandenda') ?>">Laporan Denda</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
                     <?php endif; ?>
                 </ul>
             </div>

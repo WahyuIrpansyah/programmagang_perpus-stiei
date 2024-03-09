@@ -24,8 +24,8 @@
                     </div>
                     <div class="card-body">
                         <form action="" method="post">
+                            <input type="hidden" name="id_absensi" value="<?= $absensi->id_absensi ?>">
                             <div class="form-group row">
-                                <input type="hidden" name="tanggal" value="<?= $absensi->tanggal ?>">
                                 <label for="tanggal" class="col-md-2">Tanggal</label>
                                 <div class="col-md-10">
                                     <input type="date" name="tanggal" required class="form-control">

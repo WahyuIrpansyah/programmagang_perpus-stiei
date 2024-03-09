@@ -21,6 +21,7 @@
                     <div class="card-header">
                         Data Absensi
                         <a href="<?= base_url('absensi/cetak') ?>" class="btn btn-sm btn-info mr-1 float-right"><i class="fas fa-print">Cetak Data</i></a>
+                        <a href="<?= base_url('absensi') ?>" class="btn btn-sm btn-info mr-1 float-right"><i class="fas fa-plus"></i> Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered" id="mytabel">
@@ -34,7 +35,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $tanggal;
+                                <?php $id_absensi;
                                 foreach ($absensi as $a) {
                                 ?>
                                     <tr>
@@ -43,8 +44,8 @@
                                         <td><?= $a->nama ?></td>
                                         <td><?= $a->jenis_pengunjung ?></td>
                                         <td>
-                                            <a href="<?= base_url('laporanabsensi/ubah/' . $a->npm) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
-                                            <a href="<?= base_url('laporanabsensi/hapus/' . $a->npm) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url('laporanabsensi/ubah/' . $a->id_absensi) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Ubah</a>
+                                            <a href="<?= base_url('laporanabsensi/hapus/' . $a->id_absensi) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php

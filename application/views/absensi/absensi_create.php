@@ -26,18 +26,18 @@
                             <div class="form-group row">
                                 <label for="tanggal" class="col-md-2">Tanggal</label>
                                 <div class="col-md-10">
-                                    <input type="date" name="tanggal" required class="form-control">
+                                    <input type="date" name="tanggal" class="form-control" value="<?= date('Y-m-d') ?>" readonly>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="npm" class="col-md-2">Npm</label>
                                 <div class="col-md-10">
-                                    <select name="npm" required class="form-control">
-                                        <option value="">- Pilih NPM -</option>
+                                    <input type="text" list="npm" name="npm" required placeholder="Masukkan Npm" required class="form-control">
+                                    <datalist id="npm">
                                         <?php foreach ($members as $member) : ?>
-                                            <option value="<?= $member->npm ?>"><?= $member->npm ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                            <option value="<?= $member->npm ?>">
+                                            <?php endforeach; ?>
+                                    </datalist>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -67,3 +67,37 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Mendapatkan elemen input npm
+    var npmInput = document.querySelector('input[name="npm"]');
+
+    // Mendapatkan elemen input nama
+    var namaInput = document.querySelector('input[name="nama"]');
+
+    // Daftar member dari PHP
+    var members = [
+        <?php foreach ($members as $member) : ?> {
+                npm: "<?= $member->npm ?>",
+                nama: "<?= $member->nama ?>"
+            },
+        <?php endforeach; ?>
+    ];
+
+    // Menambahkan event listener ketika nilai npm berubah
+    npmInput.addEventListener('input', function() {
+        // Mendapatkan nilai npm
+        var npm = this.value;
+
+        // Loop melalui daftar member
+        for (var i = 0; i < members.length; i++) {
+            // Jika npm member sama dengan npm yang dimasukkan
+            if (members[i].npm === npm) {
+                // Mengisi nilai nama dengan nama member
+                namaInput.value = members[i].nama;
+                // Berhenti loop
+                break;
+            }
+        }
+    });
+</script>

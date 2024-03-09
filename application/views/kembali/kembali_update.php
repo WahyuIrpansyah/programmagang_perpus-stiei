@@ -64,7 +64,7 @@
                             <div class="form-group row">
                                 <label for="denda" class="col-md-2">Denda</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="denda" required placeholder="Denda" value="<?= $kembali->denda ?>" class="form-control">
+                                    <input type="text" name="denda" id="denda" required placeholder="Masukkan Denda" value="<?= $kembali->denda ?>" class="form-control" readonly>
                                 </div>
                             </div>
                             <div class="form-group">

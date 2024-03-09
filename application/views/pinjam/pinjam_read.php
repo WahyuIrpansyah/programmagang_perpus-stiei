@@ -21,6 +21,7 @@
                     <div class="card-header">
                         Data Pinjam
                         <a href="<?= base_url('pinjam/cetak') ?>" class="btn btn-sm btn-info mr-1 float-right"><i class="fas fa-print">Cetak Data</i></a>
+                        <a href="<?= base_url('pinjam') ?>" class="btn btn-sm btn-info mr-1 float-right"><i class="fas fa-plus"></i> Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered" id="mytabel">

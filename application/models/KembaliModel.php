@@ -9,6 +9,16 @@ class KembaliModel extends CI_Model
         return $this->db->get($this->tabel)->result();
     }
 
+    public function get_member_baru_with_kembali()
+    {
+        return $this->db
+            ->select('member_baru.*, kembali.*')
+            ->from('member_baru')
+            ->join('kembali', 'member_baru.npm = kembali.npm', 'left')
+            ->get()
+            ->result();
+    }
+
     function insert_kembali()
     {
         $data = [
@@ -49,5 +59,16 @@ class KembaliModel extends CI_Model
     {
         $this->db->where('id_kembali', $id_kembali);
         $this->db->delete($this->tabel);
+    }
+
+    public function add_foreign_key_constraint()
+    {
+        $sql = "ALTER TABLE kembali
+                ADD CONSTRAINT fk_kembali_member_baru
+                FOREIGN KEY (npm) REFERENCES member_baru(npm)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE";
+
+        $this->db->query($sql);
     }
 }

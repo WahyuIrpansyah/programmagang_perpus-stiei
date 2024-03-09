@@ -20,14 +20,14 @@ class laporanabsensi extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function ubah($npm)
+    public function ubah($id_absensi)
     {
         if (isset($_POST['update'])) {
             $this->AbsensiModel->update_absensi();
             redirect('laporanabsensi');
         } else {
             $data['title'] = "Perbaharui Data Absensi | STIE Indonesia Banjarmasin";
-            $data['absensi'] = $this->AbsensiModel->get_absensi_bynpm($npm);
+            $data['absensi'] = $this->AbsensiModel->get_absensi_byid_absensi($id_absensi);
             $this->load->view('template/header', $data);
             $this->load->view('template/sidebar');
             $this->load->view('absensi/absensi_update');
@@ -35,10 +35,10 @@ class laporanabsensi extends CI_Controller
         }
     }
 
-    public function hapus($npm)
+    public function hapus($id_absensi)
     {
-        if (isset($npm)) {
-            $this->AbsensiModel->delete_absensi($npm);
+        if (isset($id_absensi)) {
+            $this->AbsensiModel->delete_absensi($id_absensi);
             redirect('laporanabsensi');
         }
     }

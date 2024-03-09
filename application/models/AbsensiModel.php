@@ -32,9 +32,9 @@ class AbsensiModel extends CI_Model
         $this->db->insert($this->tabel, $data);
     }
 
-    public function get_absensi_bynpm($npm)
+    public function get_absensi_byid_absensi($id_absensi)
     {
-        return $this->db->get_where($this->tabel, ['npm' => $npm])->row();
+        return $this->db->get_where($this->tabel, ['id_absensi' => $id_absensi])->row();
     }
 
     public function update_absensi()
@@ -46,13 +46,13 @@ class AbsensiModel extends CI_Model
             'jenis_pengunjung' => $this->input->post('jenis_pengunjung')
         ];
 
-        $this->db->where('npm', $this->input->post('npm'));
+        $this->db->where('id_absensi', $this->input->post('id_absensi'));
         $this->db->update($this->tabel, $data);
     }
 
-    public function delete_absensi($npm)
+    public function delete_absensi($id_absensi)
     {
-        $this->db->where('npm', $npm);
+        $this->db->where('id_absensi', $id_absensi);
         $this->db->delete($this->tabel);
     }
 

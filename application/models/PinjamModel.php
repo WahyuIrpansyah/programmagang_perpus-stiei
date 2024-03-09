@@ -9,6 +9,16 @@ class PinjamModel extends CI_Model
         return $this->db->get($this->tabel)->result();
     }
 
+    public function get_member_baru_with_pinjam()
+    {
+        return $this->db
+            ->select('member_baru.*, pinjam.*')
+            ->from('member_baru')
+            ->join('pinjam', 'member_baru.npm = pinjam.npm', 'left')
+            ->get()
+            ->result();
+    }
+
     function insert_pinjam()
     {
         $data = [
@@ -47,5 +57,16 @@ class PinjamModel extends CI_Model
     {
         $this->db->where('id_pinjam', $id_pinjam);
         $this->db->delete($this->tabel);
+    }
+
+    public function add_foreign_key_constraint()
+    {
+        $sql = "ALTER TABLE pinjam
+                ADD CONSTRAINT fk_pinjam_member_baru
+                FOREIGN KEY (npm) REFERENCES member_baru(npm)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE";
+
+        $this->db->query($sql);
     }
 }

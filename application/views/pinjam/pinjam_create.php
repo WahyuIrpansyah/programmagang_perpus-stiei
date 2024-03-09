@@ -28,21 +28,26 @@
                             <div class="form-group row">
                                 <label for="npm" class="col-md-2">Npm</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="npm" required placeholder="Masukkan Npm" class="form-control">
+                                    <input type="text" list="npm" name="npm" required placeholder="Masukkan Npm" required class="form-control">
+                                    <datalist id="npm">
+                                        <?php foreach ($members as $member) : ?>
+                                            <option value="<?= $member->npm ?>">
+                                            <?php endforeach; ?>
+                                    </datalist>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="nama" class="col-md-2">Nama</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="nama" required placeholder="Nama" class="form-control">
+                                    <input type="text" name="nama" required placeholder="Masukkan Nama" class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="jurusan" class="col-md-2">Jurusan</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="jurusan" required placeholder="Jurusan" class="form-control">
+                                    <input type="text" name="jurusan" required placeholder="Masukkan Jurusan" class="form-control">
                                 </div>
                             </div>
 
@@ -56,14 +61,14 @@
                             <div class="form-group row">
                                 <label for="tanggal_pinjam" class="col-md-2">Tanggal Pinjam</label>
                                 <div class="col-md-10">
-                                    <input type="date" name="tanggal_pinjam" class="form-control">
+                                    <input type="date" name="tanggal_pinjam" class="form-control" value="<?= date('Y-m-d') ?>" readonly>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="tanggal_kembali" class="col-md-2">Tanggal Kembali</label>
                                 <div class="col-md-10">
-                                    <input type="date" name="tanggal_kembali" class="form-control">
+                                    <input type="date" name="tanggal_kembali" class="form-control" value="<?= date('Y-m-d', strtotime('+7 days')) ?>" readonly>
                                 </div>
                             </div>
 
@@ -80,3 +85,42 @@
         </div>
     </div>
 </div>
+<script>
+    // Mendapatkan elemen input npm
+    var npmInput = document.querySelector('input[name="npm"]');
+
+    // Mendapatkan elemen input nama
+    var namaInput = document.querySelector('input[name="nama"]');
+
+    // Mendapatkan elemen input jurusan
+    var jurusanInput = document.querySelector('input[name="jurusan"]');
+
+    // Daftar member dari PHP
+    var members = [
+        <?php foreach ($members as $member) : ?> {
+                npm: "<?= $member->npm ?>",
+                nama: "<?= $member->nama ?>",
+                jurusan: "<?= $member->jurusan ?>",
+            },
+        <?php endforeach; ?>
+    ];
+
+    // Menambahkan event listener ketika nilai npm berubah
+    npmInput.addEventListener('input', function() {
+        // Mendapatkan nilai npm
+        var npm = this.value;
+
+        // Loop melalui daftar member
+        for (var i = 0; i < members.length; i++) {
+            // Jika npm member sama dengan npm yang dimasukkan
+            if (members[i].npm === npm) {
+                // Mengisi nilai nama dengan nama member
+                namaInput.value = members[i].nama;
+                // Mengisi nilai jurusan dengan jurusan member
+                jurusanInput.value = members[i].jurusan;
+                // Berhenti loop
+                break;
+            }
+        }
+    });
+</script>

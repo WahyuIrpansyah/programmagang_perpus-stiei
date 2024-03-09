@@ -8,11 +8,13 @@ class kembali extends CI_Controller
     {
         parent::__construct();
         $this->load->model('KembaliModel');
+        $this->load->model('Member_BaruModel');
         $this->load->library('pdf');
     }
     public function cetak()
     {
         $data['kembali'] = $this->KembaliModel->get_kembali();
+        $data['members_with_kembali'] = $this->KembaliModel->get_member_baru_with_kembali();
         $this->load->view('kembali/kembali_print', $data);
     }
 
@@ -20,6 +22,7 @@ class kembali extends CI_Controller
     {
         $data['title'] = "Pengembalian | STIE Indonesia Banjarmasin";
         $data['kembali'] = $this->KembaliModel->get_kembali();
+        $data['members'] = $this->Member_BaruModel->get_member_baru();
 
         if (isset($_POST['create'])) {
             $this->KembaliModel->insert_kembali();

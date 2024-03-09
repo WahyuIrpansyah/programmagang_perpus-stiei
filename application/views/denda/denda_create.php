@@ -30,18 +30,21 @@
                                 <div class="col-md-10">
                                     <select name="bulan" required class="form-control">
                                         <option value="">- Pilih Bulan -</option>
-                                        <option value="Januari">Januari</option>
-                                        <option value="Februari">Februari</option>
-                                        <option value="Maret">Maret</option>
-                                        <option value="April">April</option>
-                                        <option value="Mei">Mei</option>
-                                        <option value="Juni">Juni</option>
-                                        <option value="Juli">Juli</option>
-                                        <option value="Agustus">Agustus</option>
-                                        <option value="September">September</option>
-                                        <option value="Oktober">Oktober</option>
-                                        <option value="November">November</option>
-                                        <option value="Desember">Desember</option>
+                                        <!-- JavaScript untuk menghasilkan opsi bulan secara real-time -->
+                                        <script>
+                                            var bulanSelect = document.querySelector('select[name="bulan"]');
+                                            var bulanSekarang = new Date().getMonth();
+                                            var namaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+                                            for (var i = 0; i < 12; i++) {
+                                                var option = document.createElement("option");
+                                                option.value = namaBulan[i];
+                                                option.text = namaBulan[i];
+                                                if (i === bulanSekarang) {
+                                                    option.selected = true;
+                                                }
+                                                bulanSelect.appendChild(option);
+                                            }
+                                        </script>
                                     </select>
                                 </div>
                             </div>
@@ -51,10 +54,20 @@
                                 <div class="col-md-10">
                                     <select name="minggu" required class="form-control">
                                         <option value="">- Pilih Minggu -</option>
-                                        <option value="Minggu I">Minggu I</option>
-                                        <option value="Minggu II">Minggu II</option>
-                                        <option value="Minggu III">Minggu III</option>
-                                        <option value="Minggu IV">Minggu IV</option>
+                                        <!-- JavaScript untuk menghasilkan opsi minggu secara real-time -->
+                                        <script>
+                                            var mingguSelect = document.querySelector('select[name="minggu"]');
+                                            var mingguSekarang = Math.ceil(new Date().getDate() / 7);
+                                            for (var i = 1; i <= 4; i++) {
+                                                var option = document.createElement("option");
+                                                option.value = "Minggu " + i;
+                                                option.text = "Minggu " + i;
+                                                if (i === mingguSekarang) {
+                                                    option.selected = true;
+                                                }
+                                                mingguSelect.appendChild(option);
+                                            }
+                                        </script>
                                     </select>
                                 </div>
                             </div>
